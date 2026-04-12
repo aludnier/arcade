@@ -1,0 +1,106 @@
+\doxysection{IGame Class Reference}
+\hypertarget{classIGame}{}\label{classIGame}\index{IGame@{IGame}}
+
+
+{\ttfamily \#include $<$IGame.\+hpp$>$}
+
+
+
+Inheritance diagram for IGame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIGame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for IGame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classIGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIGame_a91b14c1b6019364120d5c5e4d4c64414}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classIGame_afd6f257cea0c2495a475e55b398787da}{init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIGame_a255ba75b5ad8d7641045905516adee92}{close}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIGame_ad4e97984eeb22e7472e782392a851aca}{update}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$)=0
+\item 
+virtual std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ \mbox{\hyperlink{classIGame_a2c09179e6b001b16ce7fd497e6085143}{get\+Gfx\+Instructions}} ()=0
+\item 
+virtual std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ \mbox{\hyperlink{classIGame_a7525de99fd0b5b8d532c8503b631d21b}{get\+Event}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIGame_a91b14c1b6019364120d5c5e4d4c64414}\label{classIGame_a91b14c1b6019364120d5c5e4d4c64414} 
+\index{IGame@{IGame}!````~IGame@{\texorpdfstring{$\sim$}{\string~}IGame}}
+\index{````~IGame@{\texorpdfstring{$\sim$}{\string~}IGame}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IGame()}{\string~IGame()}}
+{\footnotesize\ttfamily virtual IGame\+::\texorpdfstring{$\sim$}{\string~}\+IGame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIGame_a255ba75b5ad8d7641045905516adee92}\label{classIGame_a255ba75b5ad8d7641045905516adee92} 
+\index{IGame@{IGame}!close@{close}}
+\index{close@{close}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void IGame\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGame_af57f6b659b923ac0bc9ae5110822bf50}{Game}}, \mbox{\hyperlink{classMenuGame_aa1b8eaea6b5ab21b64421f3c13354550}{Menu\+Game}}, \mbox{\hyperlink{classMineSweeper_1_1Game_af57f6b659b923ac0bc9ae5110822bf50}{Mine\+Sweeper\+::\+Game}}, and \mbox{\hyperlink{classSnake_1_1GameSnake_a1676686d6e2f02bd165847485c4e0bfe}{Snake\+::\+Game\+Snake}}.
+
+\Hypertarget{classIGame_a7525de99fd0b5b8d532c8503b631d21b}\label{classIGame_a7525de99fd0b5b8d532c8503b631d21b} 
+\index{IGame@{IGame}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily virtual std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ IGame\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classMineSweeper_1_1Game_a588afdbf192b9dfadcf57c4c77ee8e2d}{Mine\+Sweeper\+::\+Game}}, \mbox{\hyperlink{classGame_a071b760d7cfb9023f2b8815c9e26bbe8}{Game}}, \mbox{\hyperlink{classMenuGame_a13970bd683952149f6b66f74eb468ab5}{Menu\+Game}}, and \mbox{\hyperlink{classSnake_1_1GameSnake_a6377949d3eba20a892b3db68a0227897}{Snake\+::\+Game\+Snake}}.
+
+\Hypertarget{classIGame_a2c09179e6b001b16ce7fd497e6085143}\label{classIGame_a2c09179e6b001b16ce7fd497e6085143} 
+\index{IGame@{IGame}!getGfxInstructions@{getGfxInstructions}}
+\index{getGfxInstructions@{getGfxInstructions}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{getGfxInstructions()}{getGfxInstructions()}}
+{\footnotesize\ttfamily virtual std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ IGame\+::get\+Gfx\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGame_a8fe4396993f4234d3254cc9a05001e39}{Game}}, \mbox{\hyperlink{classMenuGame_a0d2d82232bfd9e033c9bd302d768093e}{Menu\+Game}}, \mbox{\hyperlink{classMineSweeper_1_1Game_a8fe4396993f4234d3254cc9a05001e39}{Mine\+Sweeper\+::\+Game}}, and \mbox{\hyperlink{classSnake_1_1GameSnake_aa7339bda4870a0d7a21a2c8d1b0e3f9f}{Snake\+::\+Game\+Snake}}.
+
+\Hypertarget{classIGame_afd6f257cea0c2495a475e55b398787da}\label{classIGame_afd6f257cea0c2495a475e55b398787da} 
+\index{IGame@{IGame}!init@{init}}
+\index{init@{init}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void IGame\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGame_aac272ce2d7326151733e97c8a42ad31c}{Game}}, \mbox{\hyperlink{classMenuGame_afcff376a4b73da0b10a1f9b93328e6f0}{Menu\+Game}}, \mbox{\hyperlink{classMineSweeper_1_1Game_aac272ce2d7326151733e97c8a42ad31c}{Mine\+Sweeper\+::\+Game}}, and \mbox{\hyperlink{classSnake_1_1GameSnake_a7cf592e435eb69309ac0df88a816811b}{Snake\+::\+Game\+Snake}}.
+
+\Hypertarget{classIGame_ad4e97984eeb22e7472e782392a851aca}\label{classIGame_ad4e97984eeb22e7472e782392a851aca} 
+\index{IGame@{IGame}!update@{update}}
+\index{update@{update}!IGame@{IGame}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void IGame\+::update (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGame_ae7ae6344140ddeff5e885389a9aeab84}{Game}}, \mbox{\hyperlink{classMenuGame_aeb53e0e19315aaef454fb620ea427835}{Menu\+Game}}, \mbox{\hyperlink{classMineSweeper_1_1Game_ae7ae6344140ddeff5e885389a9aeab84}{Mine\+Sweeper\+::\+Game}}, and \mbox{\hyperlink{classSnake_1_1GameSnake_a33d5d7f495701b28436b1d5333efd9b0}{Snake\+::\+Game\+Snake}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/include/\mbox{\hyperlink{IGame_8hpp}{IGame.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="Game::getGfxInstructions" name="Game::getGfxInstructions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="416,5,605,31"/>
+<area shape="rect" id="Node000002" href="$classCore.html#afe597641aab90826b397459ef11cd105" title=" " alt="" coords="237,5,368,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,21,368,21,368,15,402,15"/>
+<area shape="rect" id="Node000003" href="$classCore.html#adcc93b561dfefacfe2bcbd60604ea7a6" title=" " alt="" coords="108,5,189,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,21,190,21,190,15,223,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a0c99d968a34e803d378692bde2e3f18f" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

@@ -1,0 +1,153 @@
+\doxysection{Game\+Matrix.\+hpp}
+\hypertarget{GameMatrix_8hpp_source}{}\label{GameMatrix_8hpp_source}\index{shared/include/GameMatrix.hpp@{shared/include/GameMatrix.hpp}}
+\mbox{\hyperlink{GameMatrix_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ GameMatrix}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGame_8hpp}{IGame.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gfx_8hpp}{gfx.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameMatrix}{GameMatrix}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameMatrix_a4e05b57ee3c5c2ce3ab1e9f5ec7c9277}{GameMatrix}}(std::size\_t\ columns,\ std::size\_t\ lines,\ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}\ defaultValue,\ std::size\_t\ tileSize):}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \_lines(lines),}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \_columns(columns),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \_tileSize(tileSize),}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \_defaultValue(defaultValue)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \_matrix.resize(\_lines,\ std::vector<T>(\_columns));}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<T>\ \&elem\ :\ \_matrix)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elem.resize(\_columns,\ \_defaultValue);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ \mbox{\hyperlink{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1}{createTileGFX}}(\textcolor{keywordtype}{char}\ txt)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ tileGFX\ =\ \{\{0,\ 0,\ \textcolor{charliteral}{'\ '},\ std::nullopt\ ,0x0\},\ 0,0\};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structrectInstr_a41a2325dc2dee3d3d6bfae1882a8e2c8}{h}}\ =\ \_tileSize;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structrectInstr_a6a1424acd084d84d096cfd5c4f96234c}{w}}\ =\ \_tileSize;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_a2b7a20e62049f08a2a577f6c422abbd1}{txt}}\ =\ txt;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tileGFX;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2}{clearInstruct}}()\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!instruct.empty())\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instruct.pop();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::stack<rectInstr>\ \&\mbox{\hyperlink{classGameMatrix_a1941372db3183cae77bea8c41796629a}{matrixToGFX}}(std::size\_t\ color,\ \textcolor{keywordtype}{char}\ txt\ =\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ tileGFX;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2}{clearInstruct}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ y\ =\ 0;\ y\ <\ \_matrix.size();\ y++)\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ x\ =\ 0;\ x\ <\ \_matrix[y].size();\ x++)\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX\ =\ \mbox{\hyperlink{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1}{createTileGFX}}(txt);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_a6f36fa39aae1f6a45f369e1e49e76cb1}{color\_hex}}\ =\ color;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_ae771ff23983a1f737928bb5da28a9057}{x}}\ =\ x\ *\ \_tileSize;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_a7c19ad6fe15968d42493f3cbd7ab28c3}{y}}\ =\ y\ *\ \_tileSize;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instruct.push(tileGFX);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instruct;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::stack<rectInstr>\ \&\mbox{\hyperlink{classGameMatrix_ac15f6374e456ba5bcc6cb3158c141215}{matrixToGFX}}(std::string\ asset,\ \textcolor{keywordtype}{char}\ txt\ =\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ tileGFX;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2}{clearInstruct}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ y\ =\ 0;\ y\ <\ \_matrix.size();\ y++)\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ x\ =\ 0;\ x\ <\ \_matrix[y].size();\ x++)\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX\ =\ \mbox{\hyperlink{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1}{createTileGFX}}(txt);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_aa31e1e47dc81cfcb71529150feaf9505}{asset\_location}}\ =\ asset;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_ae771ff23983a1f737928bb5da28a9057}{x}}\ =\ x\ *\ \_tileSize;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileGFX.\mbox{\hyperlink{structGfxInstruction_a7c19ad6fe15968d42493f3cbd7ab28c3}{y}}\ =\ y\ *\ \_tileSize;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instruct.push(tileGFX);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instruct;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameMatrix_a6013c2b9143d534a552a988d40231dd7}{resize}}(std::size\_t\ newColumns,\ std::size\_t\ newLines)}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \_lines\ =\ newLines;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \_columns\ =\ newColumns;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \_matrix.resize(\_lines,\ std::vector<T>(\_columns));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<T>\ \&elem\ :\ \_matrix)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elem.resize(\_columns,\ \_defaultValue);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}\&\ \mbox{\hyperlink{classGameMatrix_a1a5c3ecc4252d669f4519db307efb8e7}{operator()}}(std::size\_t\ x,\ std::size\_t\ y)\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ \_columns\ ||\ y\ >=\ \_lines)\{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classGameMatrix_1_1SizeError}{SizeError}}(x,\ y);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_matrix[y][x];}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameMatrix_a94cf09b99630348b4cea48a6c505d9fa}{printMatrix}}()}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<T>\ line\ :\ \_matrix)\{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}\ \&elem\ :\ line)\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ elem;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameMatrix_1_1SizeError}{SizeError}}\ :\ \textcolor{keyword}{public}\ std::exception}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ msg;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameMatrix_1_1SizeError_a050eae0522fd0dbdbc32c45c7b9bed1a}{SizeError}}(std::size\_t\ x,\ std::size\_t\ y)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ tmp;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp\ <<\ \textcolor{stringliteral}{"{}the\ coordinate\ ("{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},"{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{})\ doesnt\ fit\ the\ matrix"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ msg\ =\ tmp.str();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classGameMatrix_1_1SizeError_adf964ad26215b4b5928f5bc67bd9756e}{what}}()\ const\ noexcept\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ msg.c\_str();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameMatrix_a9f605247154b9b13701363bf0a149b12}{onTileClick}}(\mbox{\hyperlink{structpoint__s}{point\_t}}\ EventPoint,\ \textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}\ \&cell)>\ \&func)}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ cellX\ =\ EventPoint.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}}\ /\ \_tileSize;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ std::size\_t\ cellY\ =\ EventPoint.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}}\ /\ \_tileSize;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cellX\ >=\ \_columns\ ||\ cellY\ >=\ \_lines)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ func(\_matrix[cellY][cellX]);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::stack<rectInstr>\ instruct;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ std::vector<std::vector<T>>\ \_matrix;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ std::size\_t\ \_lines;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ std::size\_t\ \_columns;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ std::size\_t\ \_tileSize;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}\ \_defaultValue;}
+\DoxyCodeLine{00147\ \};}
+
+\end{DoxyCode}

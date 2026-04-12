@@ -1,0 +1,180 @@
+\doxysection{Ncurses Class Reference}
+\hypertarget{classNcurses}{}\label{classNcurses}\index{Ncurses@{Ncurses}}
+
+
+{\ttfamily \#include $<$Ncurses.\+hpp$>$}
+
+
+
+Inheritance diagram for Ncurses\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classNcurses__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ncurses\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classNcurses__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNcurses_a2565bd187834633fd68b595184ee2acf}{Ncurses}} ()
+\item 
+\mbox{\hyperlink{classNcurses_a667df6b66b98b8c82ad15088a0aa7bb1}{\texorpdfstring{$\sim$}{\string~}\+Ncurses}} () override
+\item 
+void \mbox{\hyperlink{classNcurses_a107b3086748993d007e01d916dfe23c4}{init}} () override
+\item 
+void \mbox{\hyperlink{classNcurses_ad3cad14e2cd000c67c899664a916a249}{close}} () override
+\item 
+void \mbox{\hyperlink{classNcurses_a90181ed1bc87c685f0662f2cd2314429}{clear}} () override
+\item 
+void \mbox{\hyperlink{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4}{render}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$) override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ \mbox{\hyperlink{classNcurses_aca469705a57572b9db487377717ef99c}{poll\+Events}} () override
+\item 
+void \mbox{\hyperlink{classNcurses_a8e7a86a968a03af56e605f3ee283548b}{render\+\_\+instruction}} (\mbox{\hyperlink{structrectInstr}{rect\+Instr}} \&)
+\item 
+void \mbox{\hyperlink{classNcurses_ae5a1a7348b06d7f97b3c4d0ed9387e81}{render\+\_\+instruction}} (\mbox{\hyperlink{structcircleInstr}{circle\+Instr}} \&)
+\item 
+void \mbox{\hyperlink{classNcurses_aba90781a579b0cefdb554863a441b6e3}{render\+\_\+instruction}} (\mbox{\hyperlink{structtextInstr}{text\+Instr}} \&)
+\item 
+void \mbox{\hyperlink{classNcurses_a11cc67859d7281abb3e96d24d48dc418}{render\+\_\+instruction}} (\mbox{\hyperlink{structdimensionInstr}{dimension\+Instr}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIDisplay}{IDisplay}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIDisplay_a3f639a4bdb0ab42276fee151c99ea2d8}{\texorpdfstring{$\sim$}{\string~}\+IDisplay}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNcurses_a2565bd187834633fd68b595184ee2acf}\label{classNcurses_a2565bd187834633fd68b595184ee2acf} 
+\index{Ncurses@{Ncurses}!Ncurses@{Ncurses}}
+\index{Ncurses@{Ncurses}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{Ncurses()}{Ncurses()}}
+{\footnotesize\ttfamily Ncurses\+::\+Ncurses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classNcurses_a667df6b66b98b8c82ad15088a0aa7bb1}\label{classNcurses_a667df6b66b98b8c82ad15088a0aa7bb1} 
+\index{Ncurses@{Ncurses}!````~Ncurses@{\texorpdfstring{$\sim$}{\string~}Ncurses}}
+\index{````~Ncurses@{\texorpdfstring{$\sim$}{\string~}Ncurses}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Ncurses()}{\string~Ncurses()}}
+{\footnotesize\ttfamily Ncurses\+::\texorpdfstring{$\sim$}{\string~}\+Ncurses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNcurses_a90181ed1bc87c685f0662f2cd2314429}\label{classNcurses_a90181ed1bc87c685f0662f2cd2314429} 
+\index{Ncurses@{Ncurses}!clear@{clear}}
+\index{clear@{clear}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Ncurses\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_affb8a8b5651d138058cdbd088ff3968d}{IDisplay}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classNcurses_a90181ed1bc87c685f0662f2cd2314429_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classNcurses_a90181ed1bc87c685f0662f2cd2314429_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNcurses_ad3cad14e2cd000c67c899664a916a249}\label{classNcurses_ad3cad14e2cd000c67c899664a916a249} 
+\index{Ncurses@{Ncurses}!close@{close}}
+\index{close@{close}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Ncurses\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a2d825ce63ce7fd5c967dd4900f7610de}{IDisplay}}.
+
+\Hypertarget{classNcurses_a107b3086748993d007e01d916dfe23c4}\label{classNcurses_a107b3086748993d007e01d916dfe23c4} 
+\index{Ncurses@{Ncurses}!init@{init}}
+\index{init@{init}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Ncurses\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_ad5f1757ac3a2e74e27f892c09b887dc1}{IDisplay}}.
+
+\Hypertarget{classNcurses_aca469705a57572b9db487377717ef99c}\label{classNcurses_aca469705a57572b9db487377717ef99c} 
+\index{Ncurses@{Ncurses}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ Ncurses\+::poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a5f79762f240a39eb92934c1b70a22905}{IDisplay}}.
+
+\Hypertarget{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4}\label{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4} 
+\index{Ncurses@{Ncurses}!render@{render}}
+\index{render@{render}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Ncurses\+::render (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$}]{instructions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a3fa69d2efc5ec1820bcf16d109dd9ffa}{IDisplay}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNcurses_ae5a1a7348b06d7f97b3c4d0ed9387e81}\label{classNcurses_ae5a1a7348b06d7f97b3c4d0ed9387e81} 
+\index{Ncurses@{Ncurses}!render\_instruction@{render\_instruction}}
+\index{render\_instruction@{render\_instruction}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{render\_instruction()}{render\_instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Ncurses\+::render\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircleInstr}{circle\+Instr}} \&}]{gfx }\end{DoxyParamCaption})}
+
+\Hypertarget{classNcurses_a11cc67859d7281abb3e96d24d48dc418}\label{classNcurses_a11cc67859d7281abb3e96d24d48dc418} 
+\index{Ncurses@{Ncurses}!render\_instruction@{render\_instruction}}
+\index{render\_instruction@{render\_instruction}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{render\_instruction()}{render\_instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Ncurses\+::render\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdimensionInstr}{dimension\+Instr}} \&}]{gfx }\end{DoxyParamCaption})}
+
+\Hypertarget{classNcurses_a8e7a86a968a03af56e605f3ee283548b}\label{classNcurses_a8e7a86a968a03af56e605f3ee283548b} 
+\index{Ncurses@{Ncurses}!render\_instruction@{render\_instruction}}
+\index{render\_instruction@{render\_instruction}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{render\_instruction()}{render\_instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Ncurses\+::render\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrectInstr}{rect\+Instr}} \&}]{gfx }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNcurses_a8e7a86a968a03af56e605f3ee283548b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classNcurses_aba90781a579b0cefdb554863a441b6e3}\label{classNcurses_aba90781a579b0cefdb554863a441b6e3} 
+\index{Ncurses@{Ncurses}!render\_instruction@{render\_instruction}}
+\index{render\_instruction@{render\_instruction}!Ncurses@{Ncurses}}
+\doxysubsubsection{\texorpdfstring{render\_instruction()}{render\_instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Ncurses\+::render\+\_\+instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtextInstr}{text\+Instr}} \&}]{gfx }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+graphics/\+Ncurses/include/\mbox{\hyperlink{Ncurses_8hpp}{Ncurses.\+hpp}}\item 
+graphics/\+Ncurses/src/\mbox{\hyperlink{Ncurses_8cpp}{Ncurses.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\doxysection{Game\+Matrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classGameMatrix}{}\label{classGameMatrix}\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Game\+Matrix.\+hpp$>$}
+
+
+
+Collaboration diagram for Game\+Matrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classGameMatrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGameMatrix_1_1SizeError}{Size\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameMatrix_a4e05b57ee3c5c2ce3ab1e9f5ec7c9277}{Game\+Matrix}} (std\+::size\+\_\+t columns, std\+::size\+\_\+t lines, \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} default\+Value, std\+::size\+\_\+t tile\+Size)
+\item 
+\mbox{\hyperlink{structrectInstr}{rect\+Instr}} \mbox{\hyperlink{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1}{create\+Tile\+GFX}} (char txt)
+\item 
+void \mbox{\hyperlink{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2}{clear\+Instruct}} ()
+\item 
+std\+::stack$<$ \mbox{\hyperlink{structrectInstr}{rect\+Instr}} $>$ \& \mbox{\hyperlink{classGameMatrix_a1941372db3183cae77bea8c41796629a}{matrix\+To\+GFX}} (std\+::size\+\_\+t color, char txt=\textquotesingle{} \textquotesingle{})
+\item 
+std\+::stack$<$ \mbox{\hyperlink{structrectInstr}{rect\+Instr}} $>$ \& \mbox{\hyperlink{classGameMatrix_ac15f6374e456ba5bcc6cb3158c141215}{matrix\+To\+GFX}} (std\+::string asset, char txt=\textquotesingle{} \textquotesingle{})
+\item 
+void \mbox{\hyperlink{classGameMatrix_a6013c2b9143d534a552a988d40231dd7}{resize}} (std\+::size\+\_\+t new\+Columns, std\+::size\+\_\+t new\+Lines)
+\item 
+\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} \& \mbox{\hyperlink{classGameMatrix_a1a5c3ecc4252d669f4519db307efb8e7}{operator()}} (std\+::size\+\_\+t x, std\+::size\+\_\+t y)
+\item 
+void \mbox{\hyperlink{classGameMatrix_a94cf09b99630348b4cea48a6c505d9fa}{print\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classGameMatrix_a9f605247154b9b13701363bf0a149b12}{on\+Tile\+Click}} (\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} Event\+Point, const std\+::function$<$ void(\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} \&cell)$>$ \&func)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGameMatrix_a4e05b57ee3c5c2ce3ab1e9f5ec7c9277}\label{classGameMatrix_a4e05b57ee3c5c2ce3ab1e9f5ec7c9277} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!GameMatrix@{GameMatrix}}
+\index{GameMatrix@{GameMatrix}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GameMatrix()}{GameMatrix()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+\mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\mbox{\hyperlink{classGameMatrix}{\+::\+Game\+Matrix}} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{columns,  }\item[{std\+::size\+\_\+t}]{lines,  }\item[{\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}}]{default\+Value,  }\item[{std\+::size\+\_\+t}]{tile\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2}\label{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!clearInstruct@{clearInstruct}}
+\index{clearInstruct@{clearInstruct}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clearInstruct()}{clearInstruct()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+void \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::clear\+Instruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameMatrix_af28c8da7068df40fe6166cba0135d1f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1}\label{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!createTileGFX@{createTileGFX}}
+\index{createTileGFX@{createTileGFX}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{createTileGFX()}{createTileGFX()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+\mbox{\hyperlink{structrectInstr}{rect\+Instr}} \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::create\+Tile\+GFX (\begin{DoxyParamCaption}\item[{char}]{txt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameMatrix_afd28db6536dafd0b60fe1e58e68768d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGameMatrix_a1941372db3183cae77bea8c41796629a}\label{classGameMatrix_a1941372db3183cae77bea8c41796629a} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!matrixToGFX@{matrixToGFX}}
+\index{matrixToGFX@{matrixToGFX}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{matrixToGFX()}{matrixToGFX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+std\+::stack$<$ \mbox{\hyperlink{structrectInstr}{rect\+Instr}} $>$ \& \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::matrix\+To\+GFX (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{color,  }\item[{char}]{txt = {\ttfamily \textquotesingle{}~\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameMatrix_a1941372db3183cae77bea8c41796629a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGameMatrix_ac15f6374e456ba5bcc6cb3158c141215}\label{classGameMatrix_ac15f6374e456ba5bcc6cb3158c141215} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!matrixToGFX@{matrixToGFX}}
+\index{matrixToGFX@{matrixToGFX}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{matrixToGFX()}{matrixToGFX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+std\+::stack$<$ \mbox{\hyperlink{structrectInstr}{rect\+Instr}} $>$ \& \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::matrix\+To\+GFX (\begin{DoxyParamCaption}\item[{std\+::string}]{asset,  }\item[{char}]{txt = {\ttfamily \textquotesingle{}~\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGameMatrix_ac15f6374e456ba5bcc6cb3158c141215_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGameMatrix_a9f605247154b9b13701363bf0a149b12}\label{classGameMatrix_a9f605247154b9b13701363bf0a149b12} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!onTileClick@{onTileClick}}
+\index{onTileClick@{onTileClick}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{onTileClick()}{onTileClick()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+void \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::on\+Tile\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}}}]{Event\+Point,  }\item[{const std\+::function$<$ void(\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} \&cell)$>$ \&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classGameMatrix_a1a5c3ecc4252d669f4519db307efb8e7}\label{classGameMatrix_a1a5c3ecc4252d669f4519db307efb8e7} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} \& \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{x,  }\item[{std\+::size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classGameMatrix_a94cf09b99630348b4cea48a6c505d9fa}\label{classGameMatrix_a94cf09b99630348b4cea48a6c505d9fa} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+void \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::print\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classGameMatrix_a6013c2b9143d534a552a988d40231dd7}\label{classGameMatrix_a6013c2b9143d534a552a988d40231dd7} 
+\index{GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!GameMatrix$<$ T $>$@{GameMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$ \\
+void \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2bab9ece18c950afbfa6b0fdbfa4ff731d3}{T}} $>$\+::resize (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{new\+Columns,  }\item[{std\+::size\+\_\+t}]{new\+Lines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/include/\mbox{\hyperlink{GameMatrix_8hpp}{Game\+Matrix.\+hpp}}\end{DoxyCompactItemize}

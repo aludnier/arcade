@@ -1,0 +1,8 @@
+<map id="Ncurses::render" name="Ncurses::render">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,129,80"/>
+<area shape="rect" id="Node000002" href="$classNcurses.html#a90181ed1bc87c685f0662f2cd2314429" title=" " alt="" coords="220,29,335,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,57,206,48,207,53,130,63"/>
+<area shape="rect" id="Node000003" href="$classNcurses.html#a8e7a86a968a03af56e605f3ee283548b" title=" " alt="" coords="177,79,377,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="130,72,164,76,164,81,129,77"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="243,31,236,21,240,11,254,5,277,3,306,6,318,15,314,20,304,11,277,8,255,10,243,15,241,20,247,28"/>
+</map>

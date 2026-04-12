@@ -1,0 +1,46 @@
+\doxysection{Ncurses.\+hpp}
+\hypertarget{Ncurses_8hpp_source}{}\label{Ncurses_8hpp_source}\index{graphics/Ncurses/include/Ncurses.hpp@{graphics/Ncurses/include/Ncurses.hpp}}
+\mbox{\hyperlink{Ncurses_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Ncurses}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Ncurses}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ncurses.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ NCURSES\_H\ 40}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ NCURSES\_W\ 40}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DisplayVariable_8hpp}{DisplayVariable.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDisplay_8hpp}{IDisplay.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gfx_8hpp}{gfx.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNcurses}{Ncurses}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIDisplay}{IDisplay}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNcurses_a2565bd187834633fd68b595184ee2acf}{Ncurses}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNcurses_a667df6b66b98b8c82ad15088a0aa7bb1}{\string~Ncurses}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a107b3086748993d007e01d916dfe23c4}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_ad3cad14e2cd000c67c899664a916a249}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a90181ed1bc87c685f0662f2cd2314429}{clear}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4}{render}}(std::queue<AnyInstruction>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::queue<Event>\ \mbox{\hyperlink{classNcurses_aca469705a57572b9db487377717ef99c}{pollEvents}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a8e7a86a968a03af56e605f3ee283548b}{render\_instruction}}(\mbox{\hyperlink{structrectInstr}{rectInstr}}\ \&);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a8e7a86a968a03af56e605f3ee283548b}{render\_instruction}}(\mbox{\hyperlink{structcircleInstr}{circleInstr}}\ \&);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a8e7a86a968a03af56e605f3ee283548b}{render\_instruction}}(\mbox{\hyperlink{structtextInstr}{textInstr}}\ \&);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNcurses_a8e7a86a968a03af56e605f3ee283548b}{render\_instruction}}(\mbox{\hyperlink{structdimensionInstr}{dimensionInstr}}\ \&);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structscreen}{screen}}\ \_screenSize;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \_cell\_w\ =\ 1;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \_cell\_h\ =\ 1;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_format\_instructions(std::queue<AnyInstruction>\&);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_handle\_click(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ std::queue<Event>\ \&events);}
+\DoxyCodeLine{00040\ \};}
+
+\end{DoxyCode}

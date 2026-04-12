@@ -1,0 +1,53 @@
+\doxysection{SFML.\+hpp}
+\hypertarget{SFML_8hpp_source}{}\label{SFML_8hpp_source}\index{graphics/SFML/include/SFML.hpp@{graphics/SFML/include/SFML.hpp}}
+\mbox{\hyperlink{SFML_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Display}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Display\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDisplay_8hpp}{IDisplay.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/Window/Mouse.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SFML/Window.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Color.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/RectangleShape.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <SFML/Window/Event.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <SFML/Window/Mouse.hpp>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DisplayVariable_8hpp}{DisplayVariable.hpp}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSFML}{SFML}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIDisplay}{IDisplay}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classSFML_a38eac3826e67b2dc189d291d47c59394}{SFML}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSFML_ac7d3cd8ba56cab233e22daf91cd7e4b0}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSFML_a32128b3a4bce090a0e9c24a88d4e84fa}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSFML_aca1ee78bdd7436e929a07f47f5ae7bfe}{clear}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSFML_a3c42dc8d94b81c6f87448aeab514df3c}{render}}(std::queue<AnyInstruction>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ std::queue<Event>\ \mbox{\hyperlink{classSFML_a928f5bbd9f9c2a0f71cdd60a165a527b}{pollEvents}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classSFML_a126a0eafbc9e2824e667d5a12156457e}{\string~SFML}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{structscreen}{screen}}\ screenSize;}
+\DoxyCodeLine{00035\ \ \ \ \ sf::RenderWindow\ \_window;}
+\DoxyCodeLine{00036\ \ \ \ \ std::queue<Event>\ \_events;}
+\DoxyCodeLine{00037\ \ \ \ \ std::map<std::string,\ sf::Texture>\ \_textures;}
+\DoxyCodeLine{00038\ \ \ \ \ sf::Color\ convert\_rgba(\textcolor{keywordtype}{int}\ hex\_color);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ addEvents(sf::Keyboard::Key\ touch);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ addEvents(sf::Event::MouseButtonEvent\ click);}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2b}{CommonKey}}\ sfmlToCommonKey(sf::Keyboard::Key);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ create\_texture(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structrectInstr}{rectInstr}}\ \&rectangle);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structcircleInstr}{circleInstr}}\ \&circle);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structtextInstr}{textInstr}}\ \&text);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structdimensionInstr}{dimensionInstr}}\ \&text);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

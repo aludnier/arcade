@@ -1,0 +1,37 @@
+\doxysection{Display.\+hpp}
+\hypertarget{Display_8hpp_source}{}\label{Display_8hpp_source}\index{core/include/Display.hpp@{core/include/Display.hpp}}
+\mbox{\hyperlink{Display_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Display}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Display\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDisplay_8hpp}{IDisplay.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DlLoader_8hpp}{DlLoader.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDisplay}{Display}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIDisplay}{IDisplay}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDisplay}{Display}}(\textcolor{keyword}{const}\ std::string\ \&lib\_location);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDisplay}{Display}}\ \&\mbox{\hyperlink{classDisplay_ae77e538416397a9a250ffc01e2deee1d}{operator=}}(\mbox{\hyperlink{classDisplay}{Display}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDisplay_ac2607a6bb236c55547a4223d40d85d1f}{\string~Display}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDisplay_a4a1faac567c7aa30e43a2b37c4086e03}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDisplay_a6e4dc43f1c034564ac82af9f1e093c21}{clear}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDisplay_accceb2ed9cd3712e1adbc3043647f341}{reset}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb}{render}}(std::queue<AnyInstruction>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::queue<Event>\ \mbox{\hyperlink{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac}{pollEvents}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDlLoader}{DlLoader}}\ \_lib;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::unique\_ptr<IDisplay>\ \_self;}
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}

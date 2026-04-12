@@ -1,0 +1,185 @@
+\doxysection{Display Class Reference}
+\hypertarget{classDisplay}{}\label{classDisplay}\index{Display@{Display}}
+
+
+{\ttfamily \#include $<$Display.\+hpp$>$}
+
+
+
+Inheritance diagram for Display\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classDisplay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Display\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classDisplay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDisplay_a6980f3fec4e8534e7f843f3da48d732a}{Display}} (const std\+::string \&lib\+\_\+location)
+\item 
+\mbox{\hyperlink{classDisplay}{Display}} \& \mbox{\hyperlink{classDisplay_ae77e538416397a9a250ffc01e2deee1d}{operator=}} (\mbox{\hyperlink{classDisplay}{Display}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classDisplay_ac2607a6bb236c55547a4223d40d85d1f}{\texorpdfstring{$\sim$}{\string~}\+Display}} ()
+\item 
+void \mbox{\hyperlink{classDisplay_a4a1faac567c7aa30e43a2b37c4086e03}{init}} () override
+\item 
+void \mbox{\hyperlink{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0}{close}} () override
+\item 
+void \mbox{\hyperlink{classDisplay_a6e4dc43f1c034564ac82af9f1e093c21}{clear}} () override
+\item 
+void \mbox{\hyperlink{classDisplay_accceb2ed9cd3712e1adbc3043647f341}{reset}} ()
+\item 
+void \mbox{\hyperlink{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb}{render}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$) override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ \mbox{\hyperlink{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac}{poll\+Events}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIDisplay}{IDisplay}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIDisplay_a3f639a4bdb0ab42276fee151c99ea2d8}{\texorpdfstring{$\sim$}{\string~}\+IDisplay}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDisplay_a6980f3fec4e8534e7f843f3da48d732a}\label{classDisplay_a6980f3fec4e8534e7f843f3da48d732a} 
+\index{Display@{Display}!Display@{Display}}
+\index{Display@{Display}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{Display()}{Display()}}
+{\footnotesize\ttfamily Display\+::\+Display (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lib\+\_\+location }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classDisplay_a6980f3fec4e8534e7f843f3da48d732a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDisplay_ac2607a6bb236c55547a4223d40d85d1f}\label{classDisplay_ac2607a6bb236c55547a4223d40d85d1f} 
+\index{Display@{Display}!````~Display@{\texorpdfstring{$\sim$}{\string~}Display}}
+\index{````~Display@{\texorpdfstring{$\sim$}{\string~}Display}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Display()}{\string~Display()}}
+{\footnotesize\ttfamily Display\+::\texorpdfstring{$\sim$}{\string~}\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classDisplay_ac2607a6bb236c55547a4223d40d85d1f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDisplay_a6e4dc43f1c034564ac82af9f1e093c21}\label{classDisplay_a6e4dc43f1c034564ac82af9f1e093c21} 
+\index{Display@{Display}!clear@{clear}}
+\index{clear@{clear}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Display\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_affb8a8b5651d138058cdbd088ff3968d}{IDisplay}}.
+
+\Hypertarget{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0}\label{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0} 
+\index{Display@{Display}!close@{close}}
+\index{close@{close}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Display\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a2d825ce63ce7fd5c967dd4900f7610de}{IDisplay}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDisplay_a4a1faac567c7aa30e43a2b37c4086e03}\label{classDisplay_a4a1faac567c7aa30e43a2b37c4086e03} 
+\index{Display@{Display}!init@{init}}
+\index{init@{init}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Display\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_ad5f1757ac3a2e74e27f892c09b887dc1}{IDisplay}}.
+
+\Hypertarget{classDisplay_ae77e538416397a9a250ffc01e2deee1d}\label{classDisplay_ae77e538416397a9a250ffc01e2deee1d} 
+\index{Display@{Display}!operator=@{operator=}}
+\index{operator=@{operator=}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDisplay}{Display}} \& Display\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDisplay}{Display}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classDisplay_ae77e538416397a9a250ffc01e2deee1d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac}\label{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac} 
+\index{Display@{Display}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ Display\+::poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a5f79762f240a39eb92934c1b70a22905}{IDisplay}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb}\label{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb} 
+\index{Display@{Display}!render@{render}}
+\index{render@{render}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Display\+::render (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$}]{instructions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIDisplay_a3fa69d2efc5ec1820bcf16d109dd9ffa}{IDisplay}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDisplay_accceb2ed9cd3712e1adbc3043647f341}\label{classDisplay_accceb2ed9cd3712e1adbc3043647f341} 
+\index{Display@{Display}!reset@{reset}}
+\index{reset@{reset}!Display@{Display}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Display\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classDisplay_accceb2ed9cd3712e1adbc3043647f341_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/\mbox{\hyperlink{Display_8hpp}{Display.\+hpp}}\item 
+core/src/\mbox{\hyperlink{Display_8cpp}{Display.\+cpp}}\end{DoxyCompactItemize}

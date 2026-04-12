@@ -1,0 +1,106 @@
+\doxysection{IDisplay Class Reference}
+\hypertarget{classIDisplay}{}\label{classIDisplay}\index{IDisplay@{IDisplay}}
+
+
+{\ttfamily \#include $<$IDisplay.\+hpp$>$}
+
+
+
+Inheritance diagram for IDisplay\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIDisplay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for IDisplay\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classIDisplay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIDisplay_a3f639a4bdb0ab42276fee151c99ea2d8}{\texorpdfstring{$\sim$}{\string~}\+IDisplay}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classIDisplay_ad5f1757ac3a2e74e27f892c09b887dc1}{init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIDisplay_a2d825ce63ce7fd5c967dd4900f7610de}{close}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIDisplay_affb8a8b5651d138058cdbd088ff3968d}{clear}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classIDisplay_a3fa69d2efc5ec1820bcf16d109dd9ffa}{render}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$)=0
+\item 
+virtual std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ \mbox{\hyperlink{classIDisplay_a5f79762f240a39eb92934c1b70a22905}{poll\+Events}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIDisplay_a3f639a4bdb0ab42276fee151c99ea2d8}\label{classIDisplay_a3f639a4bdb0ab42276fee151c99ea2d8} 
+\index{IDisplay@{IDisplay}!````~IDisplay@{\texorpdfstring{$\sim$}{\string~}IDisplay}}
+\index{````~IDisplay@{\texorpdfstring{$\sim$}{\string~}IDisplay}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IDisplay()}{\string~IDisplay()}}
+{\footnotesize\ttfamily virtual IDisplay\+::\texorpdfstring{$\sim$}{\string~}\+IDisplay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIDisplay_affb8a8b5651d138058cdbd088ff3968d}\label{classIDisplay_affb8a8b5651d138058cdbd088ff3968d} 
+\index{IDisplay@{IDisplay}!clear@{clear}}
+\index{clear@{clear}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void IDisplay\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classDisplay_a6e4dc43f1c034564ac82af9f1e093c21}{Display}}, \mbox{\hyperlink{classNcurses_a90181ed1bc87c685f0662f2cd2314429}{Ncurses}}, \mbox{\hyperlink{classSDL2_a4f78f78e314048f75fa50ac4b0be8701}{SDL2}}, and \mbox{\hyperlink{classSFML_aca1ee78bdd7436e929a07f47f5ae7bfe}{SFML}}.
+
+\Hypertarget{classIDisplay_a2d825ce63ce7fd5c967dd4900f7610de}\label{classIDisplay_a2d825ce63ce7fd5c967dd4900f7610de} 
+\index{IDisplay@{IDisplay}!close@{close}}
+\index{close@{close}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void IDisplay\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classDisplay_a8c1cce1a09fcf618af842bf0972dd7c0}{Display}}, \mbox{\hyperlink{classNcurses_ad3cad14e2cd000c67c899664a916a249}{Ncurses}}, \mbox{\hyperlink{classSDL2_a6b48c229f6c065ef1a0d2f77c4c59983}{SDL2}}, and \mbox{\hyperlink{classSFML_a32128b3a4bce090a0e9c24a88d4e84fa}{SFML}}.
+
+\Hypertarget{classIDisplay_ad5f1757ac3a2e74e27f892c09b887dc1}\label{classIDisplay_ad5f1757ac3a2e74e27f892c09b887dc1} 
+\index{IDisplay@{IDisplay}!init@{init}}
+\index{init@{init}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void IDisplay\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classDisplay_a4a1faac567c7aa30e43a2b37c4086e03}{Display}}, \mbox{\hyperlink{classNcurses_a107b3086748993d007e01d916dfe23c4}{Ncurses}}, \mbox{\hyperlink{classSDL2_a3801c7a65128056be15a0b37b96665c4}{SDL2}}, and \mbox{\hyperlink{classSFML_ac7d3cd8ba56cab233e22daf91cd7e4b0}{SFML}}.
+
+\Hypertarget{classIDisplay_a5f79762f240a39eb92934c1b70a22905}\label{classIDisplay_a5f79762f240a39eb92934c1b70a22905} 
+\index{IDisplay@{IDisplay}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{pollEvents()}{pollEvents()}}
+{\footnotesize\ttfamily virtual std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$ IDisplay\+::poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classDisplay_a4b02d67bb1cc1f4d9ea91b7c3f70bcac}{Display}}, \mbox{\hyperlink{classNcurses_aca469705a57572b9db487377717ef99c}{Ncurses}}, \mbox{\hyperlink{classSDL2_a0bf8656a9e20ebbbb21dce9697c46970}{SDL2}}, and \mbox{\hyperlink{classSFML_a928f5bbd9f9c2a0f71cdd60a165a527b}{SFML}}.
+
+\Hypertarget{classIDisplay_a3fa69d2efc5ec1820bcf16d109dd9ffa}\label{classIDisplay_a3fa69d2efc5ec1820bcf16d109dd9ffa} 
+\index{IDisplay@{IDisplay}!render@{render}}
+\index{render@{render}!IDisplay@{IDisplay}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void IDisplay\+::render (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classDisplay_a577b1ce6ec9e4168cce731b3a591f6bb}{Display}}, \mbox{\hyperlink{classNcurses_a64d732b5599f247ec8b19c9d42d8e5e4}{Ncurses}}, \mbox{\hyperlink{classSDL2_ad5a80717c7e27f938b2ef4a2ba09cc67}{SDL2}}, and \mbox{\hyperlink{classSFML_a3c42dc8d94b81c6f87448aeab514df3c}{SFML}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shared/include/\mbox{\hyperlink{IDisplay_8hpp}{IDisplay.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\doxysection{SDL2.\+hpp}
+\hypertarget{SDL2_8hpp_source}{}\label{SDL2_8hpp_source}\index{graphics/SDL2/include/SDL2.hpp@{graphics/SDL2/include/SDL2.hpp}}
+\mbox{\hyperlink{SDL2_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Display}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Display\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDisplay_8hpp}{IDisplay.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gfx_8hpp}{gfx.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_test\_font.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{DisplayVariable_8hpp}{DisplayVariable.hpp}}>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSDL2}{SDL2}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIDisplay}{IDisplay}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classSDL2_a5d2dd8ae56c1d6e199850e16aec40afe}{SDL2}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSDL2_a3801c7a65128056be15a0b37b96665c4}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSDL2_a6b48c229f6c065ef1a0d2f77c4c59983}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSDL2_a4f78f78e314048f75fa50ac4b0be8701}{clear}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSDL2_ad5a80717c7e27f938b2ef4a2ba09cc67}{render}}(std::queue<AnyInstruction>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ std::queue<Event>\ \mbox{\hyperlink{classSDL2_a0bf8656a9e20ebbbb21dce9697c46970}{pollEvents}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classSDL2_af9298d522225b2bb14394f167ec79cce}{\string~SDL2}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ std::unique\_ptr<SDL\_Window,\ \textcolor{keyword}{decltype}(\&SDL\_DestroyWindow)>\ \_window;}
+\DoxyCodeLine{00032\ \ \ \ \ std::unique\_ptr<SDL\_Renderer,\ \textcolor{keyword}{decltype}(\&SDL\_DestroyRenderer)>\ \_renderer;}
+\DoxyCodeLine{00033\ \ \ \ \ std::map<std::string,\ SDL\_Surface>\ \_surfaces;}
+\DoxyCodeLine{00034\ \ \ \ \ std::map<std::string,\ SDL\_Texture*>\ \_textures;}
+\DoxyCodeLine{00035\ \ \ \ \ std::queue<Event>\ \_events;}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structscreen}{screen}}\ screenSize;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ addEvents(SDL\_KeyboardEvent\ \&);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ addEvents(SDL\_MouseButtonEvent\ \&);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawCircle(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{float}\ radius);}
+\DoxyCodeLine{00040\ \ \ \ \ SDL\_Color\ convert\_rgba(\textcolor{keywordtype}{int}\ hexValue);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ createTextureFromSurface(SDL\_Surface\ \&surface,\ std::string\ \&assets,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2b}{CommonKey}}\ sdlToCommonKey(SDL\_Keycode\ sdlKey);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structrectInstr}{rectInstr}}\ \&);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structcircleInstr}{circleInstr}}\ \&);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structtextInstr}{textInstr}}\ \&);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ display\_instruction(\mbox{\hyperlink{structdimensionInstr}{dimensionInstr}}\ \&);}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

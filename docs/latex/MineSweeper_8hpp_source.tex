@@ -1,0 +1,90 @@
+\doxysection{Mine\+Sweeper.\+hpp}
+\hypertarget{MineSweeper_8hpp_source}{}\label{MineSweeper_8hpp_source}\index{games/MineSweeper/include/MineSweeper.hpp@{games/MineSweeper/include/MineSweeper.hpp}}
+\mbox{\hyperlink{MineSweeper_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Minesweeper}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGame_8hpp}{IGame.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Keys_8hpp}{Keys.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gfx_8hpp}{gfx.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GameMatrix_8hpp}{GameMatrix.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMineSweeper}{MineSweeper}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04c}{VISIBILITY}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04cae18c6af94b9f619f7954ad32571bd198}{HIDE}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04caf1e711bb7d807c8837f2f4db1308df38}{VISIBLE}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04ca4bd7c3b5c5f880f546e12379a0eacf0b}{FLAG}},}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMineSweeper_1_1cell_aa0e0c0a0a6b79361450742fbfc5819d3}{isMine}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04c}{VISIBILITY}}\ \mbox{\hyperlink{structMineSweeper_1_1cell_ad7bc75186a20dc9f6af75264f91da99d}{visiblility}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMineSweeper_1_1cell_a90cbc6661403ce56046ce5afa0cbc25f}{neighboringBombs}};}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \#define\ TILESIZE\ 50}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ \#define\ MATRIXLEN\ 13}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \#define\ MATRIXSIZE\ MATRIXLEN\ *\ MATRIXLEN}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \#define\ MINBOMB\ 15}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \#define\ MAXBOMB\ 25}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \#define\ TILEASSET\ "{}games/MineSweeper/asset/tileMineSweeper.jpg"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLAGASSET\ "{}games/MineSweeper/asset/TileFlag.png"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \#define\ FONT\ "{}games/MineSweeper/asset/Minesweeper.ttf"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \#define\ SMILEY\ "{}games/MineSweeper/asset/Smiley.png"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \#define\ SMILEYDEAD\ "{}games/MineSweeper/asset/SmileyDead.png"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ \#define\ SMILEYWIN\ "{}games/MineSweeper/asset/SmileyWin.png"{}}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMineSweeper_1_1Game}{Game}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIGame}{IGame}}\ }
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMineSweeper_1_1Game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMineSweeper_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_aac272ce2d7326151733e97c8a42ad31c}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_af57f6b659b923ac0bc9ae5110822bf50}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_ae7ae6344140ddeff5e885389a9aeab84}{update}}(std::queue<Event>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::queue<AnyInstruction>\ \mbox{\hyperlink{classMineSweeper_1_1Game_a8fe4396993f4234d3254cc9a05001e39}{getGfxInstructions}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::queue<GameEvent>\ \mbox{\hyperlink{classMineSweeper_1_1Game_a588afdbf192b9dfadcf57c4c77ee8e2d}{getEvent}}()\ \{\textcolor{keywordflow}{return}\ \{\};\}\ ;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_adb472f5585900b2ad4b08fb090a95639}{discoverTile}}(\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}}\ \&tile);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_af9f684adb452e4c02c8f513a5c3d3d04}{setNeighbour}}(std::size\_t\ x,\ std::size\_t\ y);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMineSweeper_1_1Game_a48b65664f85e2f7abb00bc5782a8d803}{findNextNeighbour}}(std::size\_t\ x,\ std::size\_t\ y);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structpoint__s}{point\_t}}\ \mbox{\hyperlink{classMineSweeper_1_1Game_a4f12d7c7a4ddbeafd13964917d56ee98}{findCoords}}(\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}}\ \&target);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classMineSweeper_1_1Game_a71707948454ad2ed0e5689813b65f9ab}{discoverAdjacent}}(\mbox{\hyperlink{structpoint__s}{point\_t}}\ pos);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGameMatrix}{GameMatrix<cell>}}\ \_bombs;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ \_smileyRect\ =\ \{\{\mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}}\ *\ \mbox{\hyperlink{MineSweeper_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}{TILESIZE}},\ 0,\ 0,\ \textcolor{stringliteral}{"{}"{}},\ 0\},\ 100,\ 100\};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtextInstr}{textInstr}}\ \_endGameScreen\ =\ \{\{\{0,\ 700,\ 0,\ \mbox{\hyperlink{MineSweeper_8hpp_adda1b1c264e2f9b66d594d98e4ed7ff6}{FONT}},\ 0x0000FF00\},\ 100,\ 800\},\ \textcolor{stringliteral}{"{}GAME\ OVER"{}},\ 100\};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtextInstr}{textInstr}}\ \_timer\ =\ \{\{\{\mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}}\ *\ \mbox{\hyperlink{MineSweeper_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}{TILESIZE}},\ 100,\ 0,\ \mbox{\hyperlink{MineSweeper_8hpp_adda1b1c264e2f9b66d594d98e4ed7ff6}{FONT}},\ 0xFFFFFF00\},\ 100,\ 150\},\ \textcolor{stringliteral}{"{}"{}},\ 50\};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::unordered\_map<int,\ std::string>\ \_tileAsset\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{-\/1,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/bomb.jpg"{}}\},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/TileEmpty.png"{}}\},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{1,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile1.png"{}}\},}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{2,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile2.png"{}}\},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{3,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile3.png"{}}\},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{4,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile4.png"{}}\},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{5,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile5.png"{}}\},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{6,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile6.png"{}}\},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{7,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile7.png"{}}\},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{8,\ \textcolor{stringliteral}{"{}games/MineSweeper/asset/Tile8.png"{}}\},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_win\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isAlive\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_flagActive\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::chrono::\_V2::steady\_clock::time\_point\ \_timerStart;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::size\_t\ \_discover\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::size\_t\ \_nbBombs;}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

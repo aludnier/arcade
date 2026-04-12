@@ -1,0 +1,160 @@
+\doxysection{Mine\+Sweeper\+::Game Class Reference}
+\hypertarget{classMineSweeper_1_1Game}{}\label{classMineSweeper_1_1Game}\index{MineSweeper::Game@{MineSweeper::Game}}
+
+
+{\ttfamily \#include $<$Mine\+Sweeper.\+hpp$>$}
+
+
+
+Inheritance diagram for Mine\+Sweeper\+::Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classMineSweeper_1_1Game__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mine\+Sweeper\+::Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classMineSweeper_1_1Game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMineSweeper_1_1Game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\item 
+\mbox{\hyperlink{classMineSweeper_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_aac272ce2d7326151733e97c8a42ad31c}{init}} () override
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_af57f6b659b923ac0bc9ae5110822bf50}{close}} () override
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_ae7ae6344140ddeff5e885389a9aeab84}{update}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$) override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ \mbox{\hyperlink{classMineSweeper_1_1Game_a8fe4396993f4234d3254cc9a05001e39}{get\+Gfx\+Instructions}} () override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ \mbox{\hyperlink{classMineSweeper_1_1Game_a588afdbf192b9dfadcf57c4c77ee8e2d}{get\+Event}} ()
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_adb472f5585900b2ad4b08fb090a95639}{discover\+Tile}} (\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}} \&tile)
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_af9f684adb452e4c02c8f513a5c3d3d04}{set\+Neighbour}} (std\+::size\+\_\+t x, std\+::size\+\_\+t y)
+\item 
+void \mbox{\hyperlink{classMineSweeper_1_1Game_a48b65664f85e2f7abb00bc5782a8d803}{find\+Next\+Neighbour}} (std\+::size\+\_\+t x, std\+::size\+\_\+t y)
+\item 
+\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} \mbox{\hyperlink{classMineSweeper_1_1Game_a4f12d7c7a4ddbeafd13964917d56ee98}{find\+Coords}} (\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}} \&target)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classMineSweeper_1_1Game_a71707948454ad2ed0e5689813b65f9ab}{discover\+Adjacent}} (\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIGame}{IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIGame_a91b14c1b6019364120d5c5e4d4c64414}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMineSweeper_1_1Game_ad59df6562a58a614fda24622d3715b65}\label{classMineSweeper_1_1Game_ad59df6562a58a614fda24622d3715b65} 
+\index{MineSweeper::Game@{MineSweeper::Game}!Game@{Game}}
+\index{Game@{Game}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}\label{classMineSweeper_1_1Game_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{MineSweeper::Game@{MineSweeper::Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMineSweeper_1_1Game_af57f6b659b923ac0bc9ae5110822bf50}\label{classMineSweeper_1_1Game_af57f6b659b923ac0bc9ae5110822bf50} 
+\index{MineSweeper::Game@{MineSweeper::Game}!close@{close}}
+\index{close@{close}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Game\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a255ba75b5ad8d7641045905516adee92}{IGame}}.
+
+\Hypertarget{classMineSweeper_1_1Game_a71707948454ad2ed0e5689813b65f9ab}\label{classMineSweeper_1_1Game_a71707948454ad2ed0e5689813b65f9ab} 
+\index{MineSweeper::Game@{MineSweeper::Game}!discoverAdjacent@{discoverAdjacent}}
+\index{discoverAdjacent@{discoverAdjacent}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{discoverAdjacent()}{discoverAdjacent()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Game\+::discover\+Adjacent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}}}]{pos }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_adb472f5585900b2ad4b08fb090a95639}\label{classMineSweeper_1_1Game_adb472f5585900b2ad4b08fb090a95639} 
+\index{MineSweeper::Game@{MineSweeper::Game}!discoverTile@{discoverTile}}
+\index{discoverTile@{discoverTile}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{discoverTile()}{discoverTile()}}
+{\footnotesize\ttfamily void Game\+::discover\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}} \&}]{tile }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_a4f12d7c7a4ddbeafd13964917d56ee98}\label{classMineSweeper_1_1Game_a4f12d7c7a4ddbeafd13964917d56ee98} 
+\index{MineSweeper::Game@{MineSweeper::Game}!findCoords@{findCoords}}
+\index{findCoords@{findCoords}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{findCoords()}{findCoords()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} Game\+::find\+Coords (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMineSweeper_1_1cell}{cell}} \&}]{target }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_a48b65664f85e2f7abb00bc5782a8d803}\label{classMineSweeper_1_1Game_a48b65664f85e2f7abb00bc5782a8d803} 
+\index{MineSweeper::Game@{MineSweeper::Game}!findNextNeighbour@{findNextNeighbour}}
+\index{findNextNeighbour@{findNextNeighbour}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{findNextNeighbour()}{findNextNeighbour()}}
+{\footnotesize\ttfamily void Game\+::find\+Next\+Neighbour (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{x,  }\item[{std\+::size\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_a588afdbf192b9dfadcf57c4c77ee8e2d}\label{classMineSweeper_1_1Game_a588afdbf192b9dfadcf57c4c77ee8e2d} 
+\index{MineSweeper::Game@{MineSweeper::Game}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ Mine\+Sweeper\+::\+Game\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a7525de99fd0b5b8d532c8503b631d21b}{IGame}}.
+
+\Hypertarget{classMineSweeper_1_1Game_a8fe4396993f4234d3254cc9a05001e39}\label{classMineSweeper_1_1Game_a8fe4396993f4234d3254cc9a05001e39} 
+\index{MineSweeper::Game@{MineSweeper::Game}!getGfxInstructions@{getGfxInstructions}}
+\index{getGfxInstructions@{getGfxInstructions}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{getGfxInstructions()}{getGfxInstructions()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ Game\+::get\+Gfx\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a2c09179e6b001b16ce7fd497e6085143}{IGame}}.
+
+\Hypertarget{classMineSweeper_1_1Game_aac272ce2d7326151733e97c8a42ad31c}\label{classMineSweeper_1_1Game_aac272ce2d7326151733e97c8a42ad31c} 
+\index{MineSweeper::Game@{MineSweeper::Game}!init@{init}}
+\index{init@{init}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_afd6f257cea0c2495a475e55b398787da}{IGame}}.
+
+\Hypertarget{classMineSweeper_1_1Game_af9f684adb452e4c02c8f513a5c3d3d04}\label{classMineSweeper_1_1Game_af9f684adb452e4c02c8f513a5c3d3d04} 
+\index{MineSweeper::Game@{MineSweeper::Game}!setNeighbour@{setNeighbour}}
+\index{setNeighbour@{setNeighbour}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{setNeighbour()}{setNeighbour()}}
+{\footnotesize\ttfamily void Game\+::set\+Neighbour (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{x,  }\item[{std\+::size\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+\Hypertarget{classMineSweeper_1_1Game_ae7ae6344140ddeff5e885389a9aeab84}\label{classMineSweeper_1_1Game_ae7ae6344140ddeff5e885389a9aeab84} 
+\index{MineSweeper::Game@{MineSweeper::Game}!update@{update}}
+\index{update@{update}!MineSweeper::Game@{MineSweeper::Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_ad4e97984eeb22e7472e782392a851aca}{IGame}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games/\+Mine\+Sweeper/include/\mbox{\hyperlink{MineSweeper_8hpp}{Mine\+Sweeper.\+hpp}}\item 
+games/\+Mine\+Sweeper/src/\mbox{\hyperlink{MineSweeper_8cpp}{Mine\+Sweeper.\+cpp}}\end{DoxyCompactItemize}

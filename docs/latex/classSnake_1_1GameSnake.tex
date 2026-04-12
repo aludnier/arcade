@@ -1,0 +1,176 @@
+\doxysection{Snake\+::Game\+Snake Class Reference}
+\hypertarget{classSnake_1_1GameSnake}{}\label{classSnake_1_1GameSnake}\index{Snake::GameSnake@{Snake::GameSnake}}
+
+
+{\ttfamily \#include $<$Snake.\+hpp$>$}
+
+
+
+Inheritance diagram for Snake\+::Game\+Snake\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classSnake_1_1GameSnake__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Snake\+::Game\+Snake\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classSnake_1_1GameSnake__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSnake_1_1GameSnake_a9adcbd4a48ff1a9cf410f3b29bbc2780}{Game\+Snake}} ()
+\item 
+void \mbox{\hyperlink{classSnake_1_1GameSnake_a7cf592e435eb69309ac0df88a816811b}{init}} () override
+\item 
+void \mbox{\hyperlink{classSnake_1_1GameSnake_a1676686d6e2f02bd165847485c4e0bfe}{close}} () override
+\item 
+void \mbox{\hyperlink{classSnake_1_1GameSnake_a33d5d7f495701b28436b1d5333efd9b0}{update}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$) override
+\item 
+\mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733f}{DIRECTION}} \mbox{\hyperlink{classSnake_1_1GameSnake_a2a67c0365206a85d7ee0836b952fca83}{get\+Direction}} (\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2b}{Common\+Key}} \&key)
+\item 
+void \mbox{\hyperlink{classSnake_1_1GameSnake_a3ee79d8f565239fcd1eb601dddc20307}{set\+Shark}} ()
+\item 
+void \mbox{\hyperlink{classSnake_1_1GameSnake_a4d30efe87044858f685476cb8abc4934}{set\+Fish}} ()
+\item 
+\mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82}{GAME}} $>$ \mbox{\hyperlink{classSnake_1_1GameSnake_ad98dfc48c4b2c0245172dfbedbdf4483}{get\+Matrix}} () const
+\item 
+std\+::deque$<$ \mbox{\hyperlink{structSnake_1_1snake__t}{snake\+\_\+t}} $>$ \& \mbox{\hyperlink{classSnake_1_1GameSnake_a564959ccd2204f5e6277fa0c7eaa9092}{get\+Shark}} ()
+\item 
+\mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} \& \mbox{\hyperlink{classSnake_1_1GameSnake_af390957441f5021108854a24df492468}{get\+Fish}} ()
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82}{GAME}}, std\+::vector$<$ \mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} $>$ $>$ \& \mbox{\hyperlink{classSnake_1_1GameSnake_abdddd42c659e630e24c2b43dc1f7088b}{get\+Games}} ()
+\item 
+std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ \mbox{\hyperlink{classSnake_1_1GameSnake_aa7339bda4870a0d7a21a2c8d1b0e3f9f}{get\+Gfx\+Instructions}} () override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ \mbox{\hyperlink{classSnake_1_1GameSnake_a6377949d3eba20a892b3db68a0227897}{get\+Event}} () override
+\item 
+\mbox{\hyperlink{classSnake_1_1GameSnake_a13fa5fd7ef4c5f13283a03dd8c631e26}{\texorpdfstring{$\sim$}{\string~}\+Game\+Snake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIGame}{IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIGame_a91b14c1b6019364120d5c5e4d4c64414}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSnake_1_1GameSnake_a9adcbd4a48ff1a9cf410f3b29bbc2780}\label{classSnake_1_1GameSnake_a9adcbd4a48ff1a9cf410f3b29bbc2780} 
+\index{Snake::GameSnake@{Snake::GameSnake}!GameSnake@{GameSnake}}
+\index{GameSnake@{GameSnake}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{GameSnake()}{GameSnake()}}
+{\footnotesize\ttfamily Snake\+::\+Game\+Snake\+::\+Game\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classSnake_1_1GameSnake_a13fa5fd7ef4c5f13283a03dd8c631e26}\label{classSnake_1_1GameSnake_a13fa5fd7ef4c5f13283a03dd8c631e26} 
+\index{Snake::GameSnake@{Snake::GameSnake}!````~GameSnake@{\texorpdfstring{$\sim$}{\string~}GameSnake}}
+\index{````~GameSnake@{\texorpdfstring{$\sim$}{\string~}GameSnake}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameSnake()}{\string~GameSnake()}}
+{\footnotesize\ttfamily Snake\+::\+Game\+Snake\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSnake_1_1GameSnake_a1676686d6e2f02bd165847485c4e0bfe}\label{classSnake_1_1GameSnake_a1676686d6e2f02bd165847485c4e0bfe} 
+\index{Snake::GameSnake@{Snake::GameSnake}!close@{close}}
+\index{close@{close}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Snake\+::\+Game\+Snake\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a255ba75b5ad8d7641045905516adee92}{IGame}}.
+
+\Hypertarget{classSnake_1_1GameSnake_a2a67c0365206a85d7ee0836b952fca83}\label{classSnake_1_1GameSnake_a2a67c0365206a85d7ee0836b952fca83} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733f}{Snake\+::\+DIRECTION}} Snake\+::\+Game\+Snake\+::get\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2b}{Common\+Key}} \&}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{classSnake_1_1GameSnake_a6377949d3eba20a892b3db68a0227897}\label{classSnake_1_1GameSnake_a6377949d3eba20a892b3db68a0227897} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ Snake\+::\+Game\+Snake\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a7525de99fd0b5b8d532c8503b631d21b}{IGame}}.
+
+\Hypertarget{classSnake_1_1GameSnake_af390957441f5021108854a24df492468}\label{classSnake_1_1GameSnake_af390957441f5021108854a24df492468} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getFish@{getFish}}
+\index{getFish@{getFish}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getFish()}{getFish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} \& Snake\+::\+Game\+Snake\+::get\+Fish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSnake_1_1GameSnake_abdddd42c659e630e24c2b43dc1f7088b}\label{classSnake_1_1GameSnake_abdddd42c659e630e24c2b43dc1f7088b} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getGames@{getGames}}
+\index{getGames@{getGames}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getGames()}{getGames()}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82}{GAME}}, std\+::vector$<$ \mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\+\_\+t}} $>$ $>$ \& Snake\+::\+Game\+Snake\+::get\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSnake_1_1GameSnake_aa7339bda4870a0d7a21a2c8d1b0e3f9f}\label{classSnake_1_1GameSnake_aa7339bda4870a0d7a21a2c8d1b0e3f9f} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getGfxInstructions@{getGfxInstructions}}
+\index{getGfxInstructions@{getGfxInstructions}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getGfxInstructions()}{getGfxInstructions()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ Snake\+::\+Game\+Snake\+::get\+Gfx\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a2c09179e6b001b16ce7fd497e6085143}{IGame}}.
+
+\Hypertarget{classSnake_1_1GameSnake_ad98dfc48c4b2c0245172dfbedbdf4483}\label{classSnake_1_1GameSnake_ad98dfc48c4b2c0245172dfbedbdf4483} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGameMatrix}{Game\+Matrix}}$<$ \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82}{GAME}} $>$ Snake\+::\+Game\+Snake\+::get\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSnake_1_1GameSnake_a564959ccd2204f5e6277fa0c7eaa9092}\label{classSnake_1_1GameSnake_a564959ccd2204f5e6277fa0c7eaa9092} 
+\index{Snake::GameSnake@{Snake::GameSnake}!getShark@{getShark}}
+\index{getShark@{getShark}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{getShark()}{getShark()}}
+{\footnotesize\ttfamily std\+::deque$<$ \mbox{\hyperlink{structSnake_1_1snake__t}{snake\+\_\+t}} $>$ \& Snake\+::\+Game\+Snake\+::get\+Shark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSnake_1_1GameSnake_a7cf592e435eb69309ac0df88a816811b}\label{classSnake_1_1GameSnake_a7cf592e435eb69309ac0df88a816811b} 
+\index{Snake::GameSnake@{Snake::GameSnake}!init@{init}}
+\index{init@{init}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Snake\+::\+Game\+Snake\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_afd6f257cea0c2495a475e55b398787da}{IGame}}.
+
+\Hypertarget{classSnake_1_1GameSnake_a4d30efe87044858f685476cb8abc4934}\label{classSnake_1_1GameSnake_a4d30efe87044858f685476cb8abc4934} 
+\index{Snake::GameSnake@{Snake::GameSnake}!setFish@{setFish}}
+\index{setFish@{setFish}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{setFish()}{setFish()}}
+{\footnotesize\ttfamily void Snake\+::\+Game\+Snake\+::set\+Fish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classSnake_1_1GameSnake_a3ee79d8f565239fcd1eb601dddc20307}\label{classSnake_1_1GameSnake_a3ee79d8f565239fcd1eb601dddc20307} 
+\index{Snake::GameSnake@{Snake::GameSnake}!setShark@{setShark}}
+\index{setShark@{setShark}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{setShark()}{setShark()}}
+{\footnotesize\ttfamily void Snake\+::\+Game\+Snake\+::set\+Shark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classSnake_1_1GameSnake_a33d5d7f495701b28436b1d5333efd9b0}\label{classSnake_1_1GameSnake_a33d5d7f495701b28436b1d5333efd9b0} 
+\index{Snake::GameSnake@{Snake::GameSnake}!update@{update}}
+\index{update@{update}!Snake::GameSnake@{Snake::GameSnake}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Snake\+::\+Game\+Snake\+::update (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_ad4e97984eeb22e7472e782392a851aca}{IGame}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+games/\+Snake/include/\mbox{\hyperlink{Snake_8hpp}{Snake.\+hpp}}\item 
+games/\+Snake/src/\mbox{\hyperlink{Snake_8cpp}{Snake.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\doxysection{games/\+Snake/include/\+Snake.hpp File Reference}
+\hypertarget{Snake_8hpp}{}\label{Snake_8hpp}\index{games/Snake/include/Snake.hpp@{games/Snake/include/Snake.hpp}}
+{\ttfamily \#include "{}IGame.\+hpp"{}}\newline
+{\ttfamily \#include "{}Keys.\+hpp"{}}\newline
+{\ttfamily \#include "{}gfx.\+hpp"{}}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Game\+Matrix.\+hpp"{}}\newline
+Include dependency graph for Snake.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Snake_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{Snake_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSnake_1_1snake__t}{Snake\+::snake\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structSnake_1_1cell}{Snake\+::cell}}
+\item 
+class \mbox{\hyperlink{classSnake_1_1GameSnake}{Snake\+::\+Game\+Snake}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceSnake}{Snake}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Snake_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}{TILESIZE}}~40
+\item 
+\#define \mbox{\hyperlink{Snake_8hpp_a06c6c391fc11d106e9909f0401b255b1}{COLUMNS}}~20
+\item 
+\#define \mbox{\hyperlink{Snake_8hpp_a321ae946de24c36489276616d13c46cd}{LINES}}~20
+\item 
+\#define \mbox{\hyperlink{Snake_8hpp_ae633aad6e0f26320aeaad77043448c84}{BASIC\+\_\+\+SPEED}}~500
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceSnake_a3269c9ac5a845495c9538c3ea5e3d56d}{Snake\+::\+Move\+Func}} = std\+::function$<$ void(void)$>$
+\item 
+using \mbox{\hyperlink{namespaceSnake_aac8c9a47c85570080310b57b341e243b}{Snake\+::set\+Direction\+Func}} = std\+::function$<$ \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733f}{DIRECTION}}(\mbox{\hyperlink{Keys_8hpp_aca064e9d0e2325f89d8aca2f544edb2b}{Common\+Key}})$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82}{Snake\+::\+GAME}} \{ \newline
+\mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82a27e5ea0d3a4710bc966fced53a1a08dc}{Snake\+::\+EMPTY}}
+, \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82a91d783ab4736842abedc0f729998e312}{Snake\+::\+WALL}}
+, \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82aac23ef4d1a86d86185850265531bba33}{Snake\+::\+SCORE}}
+, \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82a6b6b17247a7a3e4a6168d861b9e8c06b}{Snake\+::\+FISH}}
+, \newline
+\mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82ac4d1fbbbb21a8c8a3b0cd7ece1b6bc21}{Snake\+::\+HEAD}}
+, \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82a48ef5108c394d2b8bef4c9cbc976c9c6}{Snake\+::\+BODY}}
+, \mbox{\hyperlink{namespaceSnake_a864b2fc18694b34a086e060f30c88d82a87693f034832b69cbd295f9fdd9c51b1}{Snake\+::\+TAIL}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733f}{Snake\+::\+DIRECTION}} \{ \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733fa325095e4b444c7131aeb88ca33c7edf2}{Snake\+::\+UP}}
+, \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733fa552ec6394b72dab1dcc8bf47f05c8548}{Snake\+::\+DOWN}}
+, \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733fa81e5111ab514498d533c75dc9724f29e}{Snake\+::\+LEFT}}
+, \mbox{\hyperlink{namespaceSnake_a84f95420a1edd2cef599ca3c914c733fa7bcce9b91942351b31e124e2387546d3}{Snake\+::\+RIGHT}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Snake_8hpp_ae633aad6e0f26320aeaad77043448c84}\label{Snake_8hpp_ae633aad6e0f26320aeaad77043448c84} 
+\index{Snake.hpp@{Snake.hpp}!BASIC\_SPEED@{BASIC\_SPEED}}
+\index{BASIC\_SPEED@{BASIC\_SPEED}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{BASIC\_SPEED}{BASIC\_SPEED}}
+{\footnotesize\ttfamily \#define BASIC\+\_\+\+SPEED~500}
+
+\Hypertarget{Snake_8hpp_a06c6c391fc11d106e9909f0401b255b1}\label{Snake_8hpp_a06c6c391fc11d106e9909f0401b255b1} 
+\index{Snake.hpp@{Snake.hpp}!COLUMNS@{COLUMNS}}
+\index{COLUMNS@{COLUMNS}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{COLUMNS}{COLUMNS}}
+{\footnotesize\ttfamily \#define COLUMNS~20}
+
+\Hypertarget{Snake_8hpp_a321ae946de24c36489276616d13c46cd}\label{Snake_8hpp_a321ae946de24c36489276616d13c46cd} 
+\index{Snake.hpp@{Snake.hpp}!LINES@{LINES}}
+\index{LINES@{LINES}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{LINES}{LINES}}
+{\footnotesize\ttfamily \#define LINES~20}
+
+\Hypertarget{Snake_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}\label{Snake_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7} 
+\index{Snake.hpp@{Snake.hpp}!TILESIZE@{TILESIZE}}
+\index{TILESIZE@{TILESIZE}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{TILESIZE}{TILESIZE}}
+{\footnotesize\ttfamily \#define TILESIZE~40}
+

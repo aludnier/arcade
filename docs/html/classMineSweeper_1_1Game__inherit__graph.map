@@ -1,0 +1,5 @@
+<map id="MineSweeper::Game" name="MineSweeper::Game">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,219,167,504"/>
+<area shape="rect" id="Node000002" href="$classIGame.html" title=" " alt="" coords="7,5,165,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,184,89,218,83,218,83,184"/>
+</map>

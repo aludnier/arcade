@@ -1,0 +1,135 @@
+\doxysection{games/\+Mine\+Sweeper/include/\+Mine\+Sweeper.hpp File Reference}
+\hypertarget{MineSweeper_8hpp}{}\label{MineSweeper_8hpp}\index{games/MineSweeper/include/MineSweeper.hpp@{games/MineSweeper/include/MineSweeper.hpp}}
+{\ttfamily \#include "{}IGame.\+hpp"{}}\newline
+{\ttfamily \#include "{}Keys.\+hpp"{}}\newline
+{\ttfamily \#include "{}gfx.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for Mine\+Sweeper.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MineSweeper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MineSweeper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMineSweeper_1_1cell}{Mine\+Sweeper\+::cell}}
+\item 
+class \mbox{\hyperlink{classMineSweeper_1_1Game}{Mine\+Sweeper\+::\+Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceMineSweeper}{Mine\+Sweeper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}{TILESIZE}}~50
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}}~13
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_aedf247099628c83ae0f4a59513b3dff8}{MATRIXSIZE}}~\mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_af1dc3b933546d2e75a578209b3b1fc27}{MINBOMB}}~15
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_aa45f86c21d1ab3027e146d0dd0b9961a}{MAXBOMB}}~25
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_ab663d068e4a8cdd4f281b92f8a0386ee}{TILEASSET}}~"{}games/Mine\+Sweeper/asset/tile\+Mine\+Sweeper.\+jpg"{}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_aabcbdfde896728dd64946b089276cf43}{FLAGASSET}}~"{}games/Mine\+Sweeper/asset/Tile\+Flag.\+png"{}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_adda1b1c264e2f9b66d594d98e4ed7ff6}{FONT}}~"{}games/Mine\+Sweeper/asset/Minesweeper.\+ttf"{}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_a4697a50965c5f889e95a04caabc70144}{SMILEY}}~"{}games/Mine\+Sweeper/asset/Smiley.\+png"{}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_a1cad36480a461b640e2011b4212c6a3c}{SMILEYDEAD}}~"{}games/Mine\+Sweeper/asset/Smiley\+Dead.\+png"{}
+\item 
+\#define \mbox{\hyperlink{MineSweeper_8hpp_a8fef3b7ecb543fa70d94cf60973a7f47}{SMILEYWIN}}~"{}games/Mine\+Sweeper/asset/Smiley\+Win.\+png"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04c}{Mine\+Sweeper\+::\+VISIBILITY}} \{ \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04cae18c6af94b9f619f7954ad32571bd198}{Mine\+Sweeper\+::\+HIDE}}
+, \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04caf1e711bb7d807c8837f2f4db1308df38}{Mine\+Sweeper\+::\+VISIBLE}}
+, \mbox{\hyperlink{namespaceMineSweeper_add195e28911dee830a1bafbf7f84f04ca4bd7c3b5c5f880f546e12379a0eacf0b}{Mine\+Sweeper\+::\+FLAG}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{MineSweeper_8hpp_aabcbdfde896728dd64946b089276cf43}\label{MineSweeper_8hpp_aabcbdfde896728dd64946b089276cf43} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!FLAGASSET@{FLAGASSET}}
+\index{FLAGASSET@{FLAGASSET}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{FLAGASSET}{FLAGASSET}}
+{\footnotesize\ttfamily \#define FLAGASSET~"{}games/Mine\+Sweeper/asset/Tile\+Flag.\+png"{}}
+
+\Hypertarget{MineSweeper_8hpp_adda1b1c264e2f9b66d594d98e4ed7ff6}\label{MineSweeper_8hpp_adda1b1c264e2f9b66d594d98e4ed7ff6} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!FONT@{FONT}}
+\index{FONT@{FONT}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{FONT}{FONT}}
+{\footnotesize\ttfamily \#define FONT~"{}games/Mine\+Sweeper/asset/Minesweeper.\+ttf"{}}
+
+\Hypertarget{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}\label{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!MATRIXLEN@{MATRIXLEN}}
+\index{MATRIXLEN@{MATRIXLEN}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{MATRIXLEN}{MATRIXLEN}}
+{\footnotesize\ttfamily \#define MATRIXLEN~13}
+
+\Hypertarget{MineSweeper_8hpp_aedf247099628c83ae0f4a59513b3dff8}\label{MineSweeper_8hpp_aedf247099628c83ae0f4a59513b3dff8} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!MATRIXSIZE@{MATRIXSIZE}}
+\index{MATRIXSIZE@{MATRIXSIZE}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{MATRIXSIZE}{MATRIXSIZE}}
+{\footnotesize\ttfamily \#define MATRIXSIZE~\mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{MineSweeper_8hpp_abe148511c904883f4285d7819909b2f4}{MATRIXLEN}}}
+
+\Hypertarget{MineSweeper_8hpp_aa45f86c21d1ab3027e146d0dd0b9961a}\label{MineSweeper_8hpp_aa45f86c21d1ab3027e146d0dd0b9961a} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!MAXBOMB@{MAXBOMB}}
+\index{MAXBOMB@{MAXBOMB}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{MAXBOMB}{MAXBOMB}}
+{\footnotesize\ttfamily \#define MAXBOMB~25}
+
+\Hypertarget{MineSweeper_8hpp_af1dc3b933546d2e75a578209b3b1fc27}\label{MineSweeper_8hpp_af1dc3b933546d2e75a578209b3b1fc27} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!MINBOMB@{MINBOMB}}
+\index{MINBOMB@{MINBOMB}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{MINBOMB}{MINBOMB}}
+{\footnotesize\ttfamily \#define MINBOMB~15}
+
+\Hypertarget{MineSweeper_8hpp_a4697a50965c5f889e95a04caabc70144}\label{MineSweeper_8hpp_a4697a50965c5f889e95a04caabc70144} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!SMILEY@{SMILEY}}
+\index{SMILEY@{SMILEY}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{SMILEY}{SMILEY}}
+{\footnotesize\ttfamily \#define SMILEY~"{}games/Mine\+Sweeper/asset/Smiley.\+png"{}}
+
+\Hypertarget{MineSweeper_8hpp_a1cad36480a461b640e2011b4212c6a3c}\label{MineSweeper_8hpp_a1cad36480a461b640e2011b4212c6a3c} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!SMILEYDEAD@{SMILEYDEAD}}
+\index{SMILEYDEAD@{SMILEYDEAD}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{SMILEYDEAD}{SMILEYDEAD}}
+{\footnotesize\ttfamily \#define SMILEYDEAD~"{}games/Mine\+Sweeper/asset/Smiley\+Dead.\+png"{}}
+
+\Hypertarget{MineSweeper_8hpp_a8fef3b7ecb543fa70d94cf60973a7f47}\label{MineSweeper_8hpp_a8fef3b7ecb543fa70d94cf60973a7f47} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!SMILEYWIN@{SMILEYWIN}}
+\index{SMILEYWIN@{SMILEYWIN}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{SMILEYWIN}{SMILEYWIN}}
+{\footnotesize\ttfamily \#define SMILEYWIN~"{}games/Mine\+Sweeper/asset/Smiley\+Win.\+png"{}}
+
+\Hypertarget{MineSweeper_8hpp_ab663d068e4a8cdd4f281b92f8a0386ee}\label{MineSweeper_8hpp_ab663d068e4a8cdd4f281b92f8a0386ee} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!TILEASSET@{TILEASSET}}
+\index{TILEASSET@{TILEASSET}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{TILEASSET}{TILEASSET}}
+{\footnotesize\ttfamily \#define TILEASSET~"{}games/Mine\+Sweeper/asset/tile\+Mine\+Sweeper.\+jpg"{}}
+
+\Hypertarget{MineSweeper_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7}\label{MineSweeper_8hpp_a07ae61ed7dc31e9cddbdf9da244567c7} 
+\index{MineSweeper.hpp@{MineSweeper.hpp}!TILESIZE@{TILESIZE}}
+\index{TILESIZE@{TILESIZE}!MineSweeper.hpp@{MineSweeper.hpp}}
+\doxysubsubsection{\texorpdfstring{TILESIZE}{TILESIZE}}
+{\footnotesize\ttfamily \#define TILESIZE~50}
+

@@ -1,0 +1,68 @@
+\doxysection{gfx.\+hpp}
+\hypertarget{gfx_8hpp_source}{}\label{gfx_8hpp_source}\index{shared/include/gfx.hpp@{shared/include/gfx.hpp}}
+\mbox{\hyperlink{gfx_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2026}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ GFX}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ GFX\ header}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Keys_8hpp}{Keys.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{shape_8hpp}{shape.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }gfx\_s\ \mbox{\hyperlink{gfx_8hpp_a41e7d658f3f7543f80ce99a139020702}{gfx\_instr\_t}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpoint__s}{point\_s}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}};}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{gfx_8hpp_a8a32041ee7d3fa5ba3a4808b42ed8a8d}{point\_t}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structarea__s}{area\_s}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structpoint__s}{point\_t}}\ \mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structpoint__s}{point\_t}}\ \mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structarea__s_aec35955d2043d407fb207e6d0fed2e33}{operator<}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structarea__s}{area\_s}}\ \&o)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}}\ !=\ o.\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}}\ <\ o.\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}}\ !=\ o.\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}}\ <\ o.\mbox{\hyperlink{structarea__s_ad690e24d27d5958f4866775e05b77c45}{a}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}}\ !=\ o.\mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}})\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}}\ <\ o.\mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a7e248212bc9f699b6c8aab36929a33f2}{x}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}}\ <\ o.\mbox{\hyperlink{structarea__s_a20ec90884997b5e4f17424f8b1b6d9ac}{b}}.\mbox{\hyperlink{structpoint__s_a2f7004b5a632c501cf73aca8c9724839}{y}};}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{gfx_8hpp_aaaa63d544613662c28eee378242e302d}{area\_t}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structGfxInstruction}{GfxInstruction}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structGfxInstruction_ae771ff23983a1f737928bb5da28a9057}{x}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structGfxInstruction_a7c19ad6fe15968d42493f3cbd7ab28c3}{y}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structGfxInstruction_a2b7a20e62049f08a2a577f6c422abbd1}{txt}};}
+\DoxyCodeLine{00037\ \ \ \ \ std::optional<std::string>\ \mbox{\hyperlink{structGfxInstruction_aa31e1e47dc81cfcb71529150feaf9505}{asset\_location}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structGfxInstruction_a6f36fa39aae1f6a45f369e1e49e76cb1}{color\_hex}};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrectInstr}{rectInstr}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structGfxInstruction}{GfxInstruction}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structrectInstr_a41a2325dc2dee3d3d6bfae1882a8e2c8}{h}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structrectInstr_a6a1424acd084d84d096cfd5c4f96234c}{w}};}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcircleInstr}{circleInstr}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structGfxInstruction}{GfxInstruction}}\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structcircleInstr_a7f1bd154b9312d39cf9c326770f21737}{radius}};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{struct\ \ }\mbox{\hyperlink{structtextInstr}{textInstr}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structrectInstr}{rectInstr}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ std::string\ \mbox{\hyperlink{structtextInstr_a0efab3554ba204a0a61a6d4407d3b525}{text}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structtextInstr_ac4feed19312fa9372bdde608bb007f96}{fontSize}};}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdimensionInstr}{dimensionInstr}}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structdimensionInstr_aa3f4e87f21b2bd54ee483aa9a4fd7285}{h}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structdimensionInstr_acee76a9ef63d450e9344afbf762455a1}{w}};}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{using\ }\mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}}\ =\ std::variant<CommonKey,\ point\_t>;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{using\ }\mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{AnyInstruction}}\ =\ std::variant<rectInstr,\ circleInstr,\ textInstr,\ dimensionInstr>;}
+
+\end{DoxyCode}

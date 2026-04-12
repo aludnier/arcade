@@ -1,0 +1,170 @@
+\doxysection{Game Class Reference}
+\hypertarget{classGame}{}\label{classGame}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classGame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_a670f1e1c571f925ca1905b3f64e2642b}{Game}} (const std\+::string \&lib\+\_\+location)
+\item 
+\mbox{\hyperlink{classGame}{Game}} \& \mbox{\hyperlink{classGame_a82aba9627ff823d7e66c62949fd8424d}{operator=}} (\mbox{\hyperlink{classGame}{Game}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\item 
+void \mbox{\hyperlink{classGame_aac272ce2d7326151733e97c8a42ad31c}{init}} () override
+\item 
+void \mbox{\hyperlink{classGame_af57f6b659b923ac0bc9ae5110822bf50}{close}} () override
+\item 
+void \mbox{\hyperlink{classGame_ae7ae6344140ddeff5e885389a9aeab84}{update}} (std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$) override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ \mbox{\hyperlink{classGame_a8fe4396993f4234d3254cc9a05001e39}{get\+Gfx\+Instructions}} () override
+\item 
+std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ \mbox{\hyperlink{classGame_a071b760d7cfb9023f2b8815c9e26bbe8}{get\+Event}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIGame}{IGame}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIGame_a91b14c1b6019364120d5c5e4d4c64414}{\texorpdfstring{$\sim$}{\string~}\+IGame}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGame_a670f1e1c571f925ca1905b3f64e2642b}\label{classGame_a670f1e1c571f925ca1905b3f64e2642b} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lib\+\_\+location }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classGame_a670f1e1c571f925ca1905b3f64e2642b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classGame_ae3d112ca6e0e55150d2fdbc704474530_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGame_af57f6b659b923ac0bc9ae5110822bf50}\label{classGame_af57f6b659b923ac0bc9ae5110822bf50} 
+\index{Game@{Game}!close@{close}}
+\index{close@{close}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Game\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a255ba75b5ad8d7641045905516adee92}{IGame}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classGame_af57f6b659b923ac0bc9ae5110822bf50_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a071b760d7cfb9023f2b8815c9e26bbe8}\label{classGame_a071b760d7cfb9023f2b8815c9e26bbe8} 
+\index{Game@{Game}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{IGame_8hpp_af1e185452db4a823febbcdf1670f0fb4}{Game\+Event}} $>$ Game\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a7525de99fd0b5b8d532c8503b631d21b}{IGame}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a071b760d7cfb9023f2b8815c9e26bbe8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a8fe4396993f4234d3254cc9a05001e39}\label{classGame_a8fe4396993f4234d3254cc9a05001e39} 
+\index{Game@{Game}!getGfxInstructions@{getGfxInstructions}}
+\index{getGfxInstructions@{getGfxInstructions}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getGfxInstructions()}{getGfxInstructions()}}
+{\footnotesize\ttfamily std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5dc162b955e03805fd28d7c8c19e29e2}{Any\+Instruction}} $>$ Game\+::get\+Gfx\+Instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_a2c09179e6b001b16ce7fd497e6085143}{IGame}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a8fe4396993f4234d3254cc9a05001e39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_aac272ce2d7326151733e97c8a42ad31c}\label{classGame_aac272ce2d7326151733e97c8a42ad31c} 
+\index{Game@{Game}!init@{init}}
+\index{init@{init}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_afd6f257cea0c2495a475e55b398787da}{IGame}}.
+
+\Hypertarget{classGame_a82aba9627ff823d7e66c62949fd8424d}\label{classGame_a82aba9627ff823d7e66c62949fd8424d} 
+\index{Game@{Game}!operator=@{operator=}}
+\index{operator=@{operator=}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGame}{Game}} \& Game\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGame}{Game}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{classGame_ae7ae6344140ddeff5e885389a9aeab84}\label{classGame_ae7ae6344140ddeff5e885389a9aeab84} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{gfx_8hpp_a5fcc0447043b86bc6e45cab2818d3cbb}{Event}} $>$}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIGame_ad4e97984eeb22e7472e782392a851aca}{IGame}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ae7ae6344140ddeff5e885389a9aeab84_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/\mbox{\hyperlink{Game_8hpp}{Game.\+hpp}}\item 
+core/src/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}
